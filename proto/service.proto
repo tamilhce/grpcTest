@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+message Request { 
+    int64 a = 1; 
+    int64 b = 2 ;
+}
+
+message Response { 
+    int64 result = 1 ;
+}
+// stub
+service ComputeService { 
+    rpc ComputeAdd(Request) returns (Response);
+    rpc ComputeMultiply(Request) returns (Response);
+}
