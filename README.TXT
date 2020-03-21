@@ -11,10 +11,9 @@ Steps To deploy the server in the K8s cluster
 ----------------------------------------------
     ***refer to pre-requesties section before running the k8s deployement 
     - To deploy the server, service object 
-    kubectl create -f https://github.com/tamilhce/grpcTest/K8s/grpcServerDeploy.yaml
+    kubectl apply -f grpcTest/K8s/grpcServerDeploy.yaml
     - To deploy the ingress 
-    kubectl create -f https://github.com/tamilhce/grpcTest/K8s/voyager-ingress.yaml
-    
+    kubectl apply -f grpcTest/K8s/voyager-ingress.yaml
     
 Steps To run the CLI Client
 ----------------------------
