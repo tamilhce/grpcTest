@@ -1,0 +1,17 @@
+# Ingress object to expose the grpc service 
+apiVersion: voyager.appscode.com/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+spec:
+  rules:
+  - host: "*"
+    http:
+      port: 80
+      proto: h2
+      paths:
+      - path: /
+        backend:
+          serviceName: grpcservice
+          servicePort: 5051
+          proto: h2

@@ -25,9 +25,9 @@ func main() {
 	port := flag.String("port", "5000", "listening port")
 	address := flag.String("address", "localhost", " grpc  server address")
 	operation := flag.String("ops", "sum", "compute operation : sum/multiply")
-	fmt.Printf("****Server Address : %s & port %s***\n", *address, *port)
-	flag.Parse()
 	//Parsing the values
+	flag.Parse()
+	fmt.Printf("****Server Address : %s & port %s***\n", *address, *port)
 	values := flag.Args()
 	if len(values) < 2 {
 		fmt.Println("Kindly pass 2 Args for compute eg : cliclient --address localhost --ops sum 10 20")
@@ -37,6 +37,7 @@ func main() {
 	b, err := strconv.ParseInt(values[1], 10, 64)
 	// To open insecure grpc tcp socket
 	tcpsocket := *address + ":" + *port
+	fmt.Println("****Connecting To the server***")
 	conn, err := grpc.Dial(tcpsocket, grpc.WithInsecure())
 	if err != nil {
 		panic(err)
