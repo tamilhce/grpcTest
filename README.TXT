@@ -23,7 +23,7 @@ Steps To run the CLI Client
     <GOPATH>/bin/cliClient --address <serviceIp> --port <servicePort> --ops <operation> int1 int2
     i.e /home/aviuser/go/bin/cliClient --address 10.79.58.24 --port 80 --ops sum 10 20
 
-Steps To Build New Image (optionally)
+Steps To Build New Image (optional)
 ========================================
 **proto**
     cd github.com/tamilhce/
