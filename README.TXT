@@ -42,7 +42,7 @@ To Run the Unit Test
     cd github.com/tamilhce/grpcTest/server
     go test -v 
 
-Pre-requesties
+Pre-requisites
 ===============
 i)  voyager  Ingress controller shoud be installed in prior 
     https://appscode.com/products/voyager/v12.0.0-rc.1/setup/install/
@@ -56,7 +56,7 @@ Limitations
     ingress grpc annotations are Ingress controller specific.
     In our case the Ingress controller & Service Type Load balancer should be made avilable in the cluster
 
-Future work/ Enhacements
+Future work/ Enhancements
 =========================
     i Nginx Ingress with TLS terimination is avail in /k8s/yet_to_test folder - you can give a try & update the comments/rise issue 
     Helm package for the K8s deployment
