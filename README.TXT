@@ -1,9 +1,9 @@
 Simple GrpcMicroservice & Client
 ===============================
-This project contains end to end functionality to test simple Go GRpc based microservice depoloyed in K8s. 
+This project contains end to end functionality to test simple Go grpc based microservice depoloyed in K8s. 
 It has 3 components 
     i - cli to access the compute service (add, mulitpy)
-    ii - server docker Manifest
+    ii - server cod & docker Manifest
     iii - kubernetes deployement files 
 
 
