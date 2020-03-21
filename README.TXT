@@ -1,5 +1,5 @@
-Simple GrpcMicroservice & Client
-===============================
+Simple GRPC based Microservice Server & Client
+==============================================
 This project contains end to end functionality to test simple Go grpc based microservice depoloyed in K8s. 
 It has 3 components 
     i - cli to access the compute service (add, mulitpy)
