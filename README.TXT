@@ -62,13 +62,22 @@ Future work/ Enhacements
     Helm package for the K8s deployment
     ii REST API based client implementation approach
 
-Best-Practices 
-==============
-    i) The application is loosely coupled & easly scalable by increasing the replica count 
-    ii) easy to upgrade (default : rolling) thanks to K8s 
-    iii) used to git for code tracking 
-    iv) the application has unit tests to validate the sanity(TDD)
-    v) can be integrated with the CI/CD readily to create new docker images  & you can upgrade the appication
-       seemslessly without any down time.
-    v) you can implement side-car for redirecting the std out logs to evenstore like elastic store /fluentd - Again thanks to K8s 
-    vi)This application is stateless  & meets the cloud-native standards. 
+FAQ
+===
+i) How to scale the application ? 
+    By increasing the replication count in the deployment, the application can be easily scaled 
+ii) How to upgrade/rollback  the app ? 
+    By changing the image/config in the deployment (default strategy: Rolling update) we can upgrade or rollback to the previous version 
+iii) Is the application is stateful/stateless 
+     The applciation is stateless & so it is easy to scale as a microservice 
+iv)is Application is TDD aware? 
+    yes, The application pacakge is bundled with go unit test for each functions , The test cases can be run autamatically for new changes, we can extend additional end to end functional cases as part of CI/CD ? 
+v) Is it CI/CD aware ?
+    yes, The build procedure mentioned above can be added in the jenkins pipeline to create new image to be pushed into the repo,when ever a set of commit happens 
+vii) How to extend the eventstore to this application ? 
+    yes, there multiple design patterns available, one common approach is adding side-car to stream a logs(std out/erro) logs to external logging system ( e.g elasticsearch) 
+viii) How the dependencies are managed? 
+    By packing the applcation as container solves the dependencies & environment issues(cross-platform) 
+Having said this, The application is cloud-native, scalable microservice application :)
+
+    
