@@ -62,3 +62,13 @@ Future work/ Enhacements
     Helm package for the K8s deployment
     ii REST API based client implementation approach
 
+Best-Practices 
+==============
+    i) The application is loosely coupled & easly scalable by increasing the replica count 
+    ii) easy to upgrade (default : rolling) thanks to K8s 
+    iii) used to git for code tracking 
+    iv) the application has unit tests to validate the sanity(TDD)
+    v) can be integrated with the CI/CD readily to create new docker images  & you can upgrade the appication
+       seemslessly without any down time.
+    v) you can implement side-car for redirecting the std out logs to evenstore like elastic store /fluentd - Again thanks to K8s 
+    vi)This application is stateless  & meets the cloud-native standards. 
