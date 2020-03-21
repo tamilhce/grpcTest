@@ -22,7 +22,7 @@ Steps To run the CLI Client
     cd <GOPATH>/src/github.com/tamilhce/grpcTest/cliClient
     go build -o <GOPATH>/bin/cliClient .
     <GOPATH>/bin/cliClient --address <serviceIp> --port <servicePort> --ops <operation> int1 int2
-    i.e /home/aviuser/go/bin/cliClient --address 10.79.58.24 --port 6000 --ops sum 10 20
+    i.e /home/aviuser/go/bin/cliClient --address 10.79.58.24 --port 80 --ops sum 10 20
 
 Steps To Build New Image (optionally)
 ========================================
