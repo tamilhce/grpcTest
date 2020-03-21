@@ -58,8 +58,8 @@ Limitations
 
 Future work/ Enhancements
 =========================
-    i Nginx Ingress with TLS terimination is avail in /k8s/yet_to_test folder - you can give a try & update the comments/rise issue 
-    Helm package for the K8s deployment
+    i  Nginx Ingress controller with TLS terimination
+    ii Helm package for the K8s deployment
     ii REST API based client implementation approach
 
 FAQ
